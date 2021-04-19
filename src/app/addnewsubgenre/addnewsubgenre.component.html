@@ -1,0 +1,34 @@
+<div class="add-subgenre-container">
+  <mat-form-field class="example-form-field" >
+    <mat-label>Print new subgenre</mat-label>
+    <input matInput type="text" value="{{value}}" (input)=onInput($event) >
+    <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+      <mat-icon>close</mat-icon>
+    </button>
+    </mat-form-field>
+    <div>
+      <mat-checkbox (input)="onCheck($event)"></mat-checkbox>
+      <mat-label class="label-text">Description for this subgenre is required</mat-label>
+    </div>
+
+    <div *ngIf="isChecked" >
+      <form class="example-form">
+        <mat-form-field class="example-form-field">
+          <mat-label>Message</mat-label>
+            <input matInput #message maxlength="256"
+            value="{{description}}"
+            placeholder="Subgenre description"
+            (input)="onDescription($event)"
+          >
+          <mat-hint align="start"><strong>Describe new subgenre</strong> </mat-hint>
+          <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+        </mat-form-field>
+      </form>
+
+    </div>
+    <div>
+      <button mat-raised-button [disabled]="isDisabled"  (click)="saveNewSubgenre()" matStepperNext>Save</button>
+    </div>
+
+</div>
+

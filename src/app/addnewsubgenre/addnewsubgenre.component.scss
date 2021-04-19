@@ -1,0 +1,12 @@
+@import './../genre/genre.component.scss';
+.example-form-field {
+  width: 400px;
+}
+.add-subgenre-container {
+display: flex;
+flex-direction: column;
+
+}
+.label-text {
+  margin-left: 10px;
+}

@@ -1,0 +1,85 @@
+<div *ngIf="modal" class="position">
+  <app-book-added-window (modal)="modal = $event"></app-book-added-window>
+</div>
+
+  <div class="position" *ngIf="!modal">
+    <h2>Book - add book</h2>
+    <mat-horizontal-stepper linear #stepper>
+      <mat-step >
+        <div class="step-container">
+          <ng-template matStepLabel>Genre</ng-template>
+            <div class="step-body">
+              <app-genre (saveGenre)="saveGenre($event); ">
+
+              </app-genre>
+            </div>
+          <div class="step-footer">
+            <button mat-raised-button matStepperNext [disabled]="genreDisabled" >Next</button>
+          </div>
+        </div>
+      </mat-step>
+
+      <!--2nd step -->
+      <div></div>
+      <mat-step >
+        <div class="step-container">
+          <ng-template matStepLabel>Subgenre</ng-template>
+          <div class="step-body">
+            <app-subgenre
+            (addSubgenre)="addSubgenre($event)"
+            (saveSubgenre)="saveSubgenre($event)"
+            >
+          </app-subgenre>
+          </div>
+          <div class="step-footer">
+            <button mat-raised-button matStepperPrevious (click)="toPrevStep()">Back</button>
+            <button mat-raised-button matStepperNext [disabled]="subgenreDisabled">Next</button>
+          </div>
+        </div>
+      </mat-step>
+
+
+
+      <!--3rd step -->
+      <div>
+        <mat-step *ngIf="checked"  >
+          <div class="step-container">
+            <ng-template matStepLabel>Add new subgenre</ng-template>
+          <div class="step-body">
+            <app-addnewsubgenre
+              (newSubgenre)="saveNewSubgenre($event)"
+              (disabledButton)="addNewSubgenre = $event"
+            >
+            </app-addnewsubgenre>
+          </div>
+          <div class="step-footer">
+            <button mat-raised-button matStepperPrevious (click)="closeForm(); toPrevStep()">Back</button>
+            <!-- <button mat-raised-button matStepperNext [disabled]="addNewSubgenre" (click)="saveNewSubgenre()">Next</button> -->
+          </div>
+          </div>
+        </mat-step>
+      </div>
+
+      <!--4th step -->
+      <mat-step>
+        <div class="step-container">
+          <ng-template matStepLabel>information</ng-template>
+          <div class="step-body">
+            <app-addinfo
+            (validation)="lastStep = $event"
+            (bookInfo)="bookinfo = $event"
+            [modal]="modal"
+            ></app-addinfo>
+          </div>
+        <div class="step-footer">
+          <button mat-raised-button matStepperPrevious (click)="toPrevStep()">Back</button>
+          <button mat-raised-button [disabled]="lastStep" (click)="sendReqest(); stepper.reset()">Add book</button>
+        </div>
+        </div>
+
+      </mat-step>
+    </mat-horizontal-stepper>
+
+  </div>
+
+

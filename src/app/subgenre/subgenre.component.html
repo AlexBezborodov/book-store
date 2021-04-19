@@ -1,0 +1,7 @@
+<div class="flex">
+  <div class="container" *ngFor="let subgenre of subgenres">
+      <button mat-raised-button value="{{subgenre}}"  (click)="getGenre($event)" >{{subgenre}}</button>
+  </div>
+  <button mat-raised-button value="newSubgenre" (click)="addNewSubgenre()" matStepperNext>add new</button>
+</div>
+

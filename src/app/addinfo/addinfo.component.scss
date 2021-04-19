@@ -1,0 +1,14 @@
+@import './../genre/genre.component.scss';
+.example-form-field {
+  width: 400px;
+  margin-top: 1rem;
+}
+.small-form-field {
+  width: 190px;
+  padding: 0 5px;
+  margin-top: 1rem;
+}
+.add-info-container {
+  display: flex;
+  flex-direction: column;
+}

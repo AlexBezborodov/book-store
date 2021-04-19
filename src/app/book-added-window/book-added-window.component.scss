@@ -1,0 +1,17 @@
+@import './../main/main.component.scss';
+.column {
+  display: flex;
+  flex-direction: column;
+  p {
+    margin-top: 2rem;
+    font-weight: bold;
+    font-size: 25px;
+    color: blue;
+  }
+}
+
+.image-done {
+  width: 350px;
+  height: 350px;
+  margin: 10px;
+}
