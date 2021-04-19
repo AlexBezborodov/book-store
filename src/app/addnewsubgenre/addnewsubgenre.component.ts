@@ -30,7 +30,9 @@ export class AddnewsubgenreComponent  {
     this.isChecked = event.target.checked;
   }
   saveNewSubgenre() {
-    this.newSubgenre.emit([this.value, this.description])
+    this.newSubgenre.emit(this.value)
+    this.value = '';
+    this.description = '';
   }
 
 

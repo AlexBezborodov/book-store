@@ -9,7 +9,7 @@
         <div class="step-container">
           <ng-template matStepLabel>Genre</ng-template>
             <div class="step-body">
-              <app-genre (saveGenre)="saveGenre($event); ">
+              <app-genre [genres]="data" (saveGenre)="saveGenre($event); ">
 
               </app-genre>
             </div>
@@ -26,9 +26,11 @@
           <ng-template matStepLabel>Subgenre</ng-template>
           <div class="step-body">
             <app-subgenre
+            [newSubgenre]="newSubgenre"
             (addSubgenre)="addSubgenre($event)"
             (saveSubgenre)="saveSubgenre($event)"
             >
+
           </app-subgenre>
           </div>
           <div class="step-footer">

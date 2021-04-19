@@ -1,6 +1,6 @@
 <div class="flex">
   <div class="container" *ngFor="let genre of genres">
-      <button mat-raised-button value="{{genre}}"  (click)="getGenre($event)" >{{genre}}</button>
+      <button mat-raised-button value="{{genre.name}}"  (click)="getGenre($event)" >{{genre.name}}</button>
   </div>
 </div>
 

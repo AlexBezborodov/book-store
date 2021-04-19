@@ -1,4 +1,4 @@
-import { Component, Output,EventEmitter } from '@angular/core';
+import { Component, Output,EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-genre',
@@ -6,7 +6,7 @@ import { Component, Output,EventEmitter } from '@angular/core';
   styleUrls: ['./genre.component.scss']
 })
 export class GenreComponent {
-  genres = ['Horror','Action','Drama','History','Comedy','Thriller','Adventures','Fantasy'];
+  @Input() genres;
 
   @Output() saveGenre = new EventEmitter();
   constructor() { }

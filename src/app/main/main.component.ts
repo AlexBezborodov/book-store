@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-
+import {genres} from './../MockData/data.json';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent  {
+  data = genres;
   checked:boolean = false;
   isComplited:boolean = false;
   genre:string = "";
@@ -36,6 +37,7 @@ export class MainComponent  {
   saveSubgenre(event: string) {
     this.subgenre = event;
     this.subgenreDisabled = false;
+    this.checked = false;
   }
   toPrevStep() {
     this.genreDisabled = true;
@@ -43,12 +45,11 @@ export class MainComponent  {
     this.modal = false;
   }
   saveNewSubgenre(event:any) {
-    console.log('event', event);
+    this.newSubgenre = event;
   }
 
   sendReqest() {
     this.consolidationBookInfo =[this.bookinfo,{genre:this.genre, subgenre: this.subgenre}];
     this.modal = true;
-    console.log('send request',this.consolidationBookInfo);
   }
 }
