@@ -1,0 +1,183 @@
+{
+  "genres": [
+    {
+      "id": 1,
+      "name": "Detective",
+      "subgenres": [
+        {
+          "id": 10,
+          "name": "Criminal",
+          "isDescriptionRequired": true
+        },
+        {
+          "id": 11,
+          "name": "Historical",
+          "isDescriptionRequired": true
+        },
+        {
+          "id": 12,
+          "name": "Ex-USSR",
+          "isDescriptionRequired": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Fantasy",
+      "subgenres": [
+        {
+          "id": 13,
+          "name": "Sci-Fi",
+          "isDescriptionRequired": true
+        },
+        {
+          "id": 14,
+          "name": "Fantasy",
+          "isDescriptionRequired": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Adventures",
+      "subgenres": [
+        {
+          "id": 15,
+          "name": "American",
+          "isDescriptionRequired": true
+        },
+        {
+          "id": 16,
+          "name": "European",
+          "isDescriptionRequired": true
+        },
+        {
+          "id": 17,
+          "name": "Russian",
+          "isDescriptionRequired": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Novel",
+      "subgenres": [
+        {
+          "id": 18,
+          "name": "Historical",
+          "isDescriptionRequired": true
+        },
+        {
+          "id": 19,
+          "name": "Love",
+          "isDescriptionRequired": true
+        },
+        {
+          "id": 20,
+          "name": "Adventure",
+          "isDescriptionRequired": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Science",
+      "subgenres": [
+        {
+          "id": 21,
+          "name": "Dissertation",
+          "isDescriptionRequired": true
+        },
+        {
+          "id": 21,
+          "name": "Article",
+          "isDescriptionRequired": true
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Humor",
+      "subgenres": [
+        {
+          "id": 22,
+          "name": "Jokes",
+          "isDescriptionRequired": false
+        },
+        {
+          "id": 23,
+          "name": "Anecdote",
+          "isDescriptionRequired": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Thriller",
+      "subgenres": [
+        {
+          "id": 24,
+          "name": "Horror",
+          "isDescriptionRequired": true
+        },
+        {
+          "id": 25,
+          "name": "Mystic",
+          "isDescriptionRequired": true
+        },
+        {
+          "id": 26,
+          "name": "Detective",
+          "isDescriptionRequired": true
+        },
+        {
+          "id": 27,
+          "name": "Drama",
+          "isDescriptionRequired": true
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Poetry",
+      "subgenres": [
+        {
+          "id": 28,
+          "name": "Lurics",
+          "isDescriptionRequired": false
+        },
+        {
+          "id": 28,
+          "name": "Classic",
+          "isDescriptionRequired": false
+        },
+        {
+          "id": 29,
+          "name": "Modern",
+          "isDescriptionRequired": false
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Psychology",
+      "subgenres": [
+        {
+          "id": 30,
+          "name": "dissertation",
+          "isDescriptionRequired": true
+        },
+        {
+          "id": 31,
+          "name": "article",
+          "isDescriptionRequired": true
+        },
+        {
+          "id": 32,
+          "name": "Practical",
+          "isDescriptionRequired": true
+        }
+      ]
+    }
+  ]
+}
